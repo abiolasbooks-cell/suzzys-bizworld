@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--pink:#ff2e93;--yellow:#ffd60a;--ink:#000;--cream:#fff8ec;--soft:#ffe3f1;
+:root{--pinkd:#d1006c;--pink:#ff2e93;--yellow:#ffd60a;--ink:#000;--cream:#fff8ec;--soft:#ffe3f1;
 --display:'Bricolage Grotesque',Impact,sans-serif;--body:'Figtree',system-ui,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
@@ -20,7 +20,7 @@ button{cursor:pointer}
 :focus-visible{outline:3px solid var(--ink);outline-offset:2px}
 .btn{display:inline-block;background:var(--yellow);border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:10px 18px;font-weight:700;border-radius:99px;text-decoration:none;color:var(--ink)}
 .btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
-.btn.pink{background:var(--pink);color:#fff}
+.btn.pink{background:var(--pinkd);color:#fff}
 .btn{transition:transform .15s,box-shadow .15s}
 @media(hover:hover){.btn:not([disabled]):hover{transform:translate(-3px,-4px);box-shadow:8px 8px 0 var(--ink)}}
 .btn:not([disabled]):active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
@@ -33,7 +33,7 @@ button{cursor:pointer}
 header.top{position:sticky;top:0;z-index:20;background:var(--cream);border-bottom:2px solid var(--ink)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 16px}
 .logo{font:800 26px var(--display);letter-spacing:-.04em;color:var(--ink);text-decoration:none}
-.logo b{color:var(--pink)}
+.logo b{color:var(--pinkd)}
 .iconbtn{position:relative;background:none;border:0;font-size:26px;padding:4px 8px}
 #bagBtn{position:relative}
 #count{position:absolute;top:-10px;right:-10px;background:var(--ink);color:#fff;border-radius:99px;min-width:24px;height:24px;font-size:13px;display:grid;place-items:center}
@@ -43,14 +43,14 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;p
 @media(min-width:860px){.hero .wrap{grid-template-columns:1.05fr 1fr}}
 .pill{display:inline-block;background:var(--yellow);border:2px solid var(--ink);border-radius:99px;padding:6px 16px;font:700 13px var(--body);letter-spacing:.08em;text-transform:uppercase}
 .hero h1{font-size:clamp(54px,12vw,104px);font-weight:800;letter-spacing:-.045em;margin:22px 0}
-.hero h1 em{font-style:normal;color:var(--pink)}
+.hero h1 em{font-style:normal;color:var(--pinkd)}
 .hero h1 u{text-decoration:none;background:linear-gradient(transparent 78%,var(--yellow) 78%)}
-.hero p{font-size:19px;max-width:34ch;margin:0 0 26px;color:#4a3a44}
+.hero p{font-size:19px;max-width:34ch;margin:0 0 26px;color:#241820;font-weight:600}
 .hero .btn{padding:14px 34px;font-size:17px}
 .frame{position:relative;aspect-ratio:1;border:3px solid var(--ink);border-radius:30px;box-shadow:10px 10px 0 var(--ink);background:radial-gradient(circle at 25% 28%,var(--yellow) 0 18%,transparent 18.5%),radial-gradient(circle at 78% 80%,var(--yellow) 0 20%,transparent 20.5%),var(--pink);display:grid;place-items:center;font-size:clamp(60px,12vw,110px)}
 .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:27px}
 .sticker{position:absolute;top:-18px;left:-8px;width:112px;height:112px;border-radius:50%;background:var(--yellow);border:3px solid var(--ink);display:grid;place-items:center;text-align:center;font:800 18px/1.1 var(--display);transform:rotate(-10deg);z-index:2}
-.shophead{padding:24px 16px 12px;font-size:clamp(34px,6vw,56px);letter-spacing:-.04em}.shophead em{font-style:normal;color:var(--pink)}
+.shophead{padding:24px 16px 12px;font-size:clamp(34px,6vw,56px);letter-spacing:-.04em}.shophead em{font-style:normal;color:var(--pinkd)}
 .jump{display:flex;gap:10px;flex-wrap:wrap;padding:0 16px 8px}
 .jump a{border:3px solid var(--ink);border-radius:99px;padding:6px 16px;font-weight:700;text-decoration:none;color:var(--ink);background:var(--soft)}
 section.cat{padding:36px 16px 8px}
@@ -97,6 +97,27 @@ dialog .ph{border:3px solid var(--ink);border-radius:12px;font-size:90px}
 .arow .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;align-items:center}
 .arow img,.arow .thumb{width:64px;height:64px;object-fit:cover;border:3px solid var(--ink);border-radius:8px;display:grid;place-items:center;font-size:28px}
 .msg{font-weight:700;margin-top:8px}
+.panel textarea{width:100%;padding:9px;border:3px solid var(--ink);border-radius:8px;font:inherit;min-height:70px}
+.more{font-size:13px;font-weight:700;color:var(--pinkd)}
+.desc{margin:0;white-space:pre-line}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.chip{border:3px solid var(--ink);background:#fff;border-radius:99px;padding:6px 14px;font-weight:700}
+.chip.on{background:var(--yellow)}
+.note{font-size:13px;margin:0 0 10px}
+.search{position:relative;padding:0 16px 14px}
+.search input{width:100%;padding:14px 18px;border:3px solid var(--ink);border-radius:99px;background:#fff;font-size:16px;box-shadow:4px 4px 0 var(--ink)}
+.sr{position:absolute;left:16px;right:16px;top:100%;margin-top:-6px;max-height:min(60vh,420px);overflow:auto;background:#fff;border:3px solid var(--ink);border-radius:14px;box-shadow:6px 6px 0 var(--ink);z-index:15}
+.sri{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:0;border-bottom:2px solid #eee;padding:10px 12px}
+.sri:hover,.sri:focus-visible{background:var(--soft)}
+.sri img,.sri .sth{width:44px;height:44px;object-fit:cover;border-radius:8px;border:2px solid var(--ink);display:grid;place-items:center;flex:none;font-size:22px}
+.sri span{flex:1;font-weight:600}.sri b{white-space:nowrap}
+.srn{padding:14px;margin:0}
+.how{padding:8px 16px}
+.how h2{font-size:clamp(28px,5vw,40px);letter-spacing:-.03em;margin:28px 0 14px}
+.how ol{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+@media(min-width:700px){.how ol{grid-template-columns:repeat(3,1fr)}}
+.how li{display:flex;gap:12px;align-items:center;background:#fff;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);border-radius:14px;padding:14px;font-weight:600}
+.how li b{flex:none;width:38px;height:38px;border-radius:50%;background:var(--yellow);border:3px solid var(--ink);display:grid;place-items:center;font:800 18px var(--display)}
 .pwbox{position:relative}.pwbox input{padding-right:50px!important}
 .pwbox button{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:0;font-size:22px;padding:6px;line-height:1}
 .drops{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
@@ -126,7 +147,12 @@ dialog .ph{border:3px solid var(--ink);border-radius:12px;font-size:90px}
       <img id="heroImg" src="hero.jpg" alt="New drops at Suzzy’s Bizworld" onerror="this.style.display='none'">
       <div class="sticker">New<br>drops!</div></div>
   </div></div>
+  <section class="how wrap" id="how"><h2>How to order</h2><ol>
+    <li><b>1</b><span>Add items to your bag</span></li>
+    <li><b>2</b><span>Tap Checkout to WhatsApp</span></li>
+    <li><b>3</b><span>Confirm delivery &amp; payment details with us on WhatsApp</span></li></ol></section>
   <h2 class="shophead wrap" id="shop">Shop the <em>collection</em></h2>
+  <div class="search wrap"><input id="q" type="search" placeholder="Search products…" autocomplete="off" aria-label="Search products"><div id="sr" class="sr hide"></div></div>
   <nav class="jump wrap" aria-label="Sections">
     <a href="#beauty">Beauty</a><a href="#self-care">Self-care</a><a href="#home">Home & lifestyle</a>
   </nav>
@@ -138,6 +164,7 @@ dialog .ph{border:3px solid var(--ink);border-radius:12px;font-size:90px}
 <footer><div class="wrap">
   <h2>Suzzy’s Bizworld</h2>
   <p>Beauty that’s loud, fun and totally you.</p>
+  <p><a id="tt" class="btn sm hide" target="_blank" rel="noopener" href="#">TikTok</a></p>
   <small>© 2026 Suzzy’s Bizworld</small>
 </div></footer>
 
@@ -147,8 +174,8 @@ dialog .ph{border:3px solid var(--ink);border-radius:12px;font-size:90px}
   <div id="items"></div>
   <div id="bagFoot">
     <div class="total"><span>Total</span><span id="total">₦0</span></div>
-    <button class="btn pink" id="order" style="width:100%">Order on WhatsApp</button>
-    <p style="font-size:13px;margin:8px 0 0">You’ll add your delivery address in WhatsApp. Suzzy confirms payment there.</p>
+    <p class="note">Tapping checkout sends your order list to our WhatsApp so we can confirm delivery fees and payment details.</p>
+    <button class="btn pink" id="order" style="width:100%">Checkout to WhatsApp</button>
   </div>
 </aside>
 <dialog id="pd"></dialog>
@@ -209,24 +236,25 @@ function renderStore(){
         ${p.compare_at&&p.in_stock?'<span class="badge">SALE</span>':''}${p.in_stock?'':'<span class="badge out">Sold out</span>'}
         ${pic(p)}
         <div class="info"><h3>${esc(p.name)}</h3>${priceHtml(p)}
-        <button class="btn sm pink" data-add="${p.id}" ${p.in_stock?'':'disabled'}>${p.in_stock?'Add to bag':'Sold out'}</button></div>
+        <span class="more">Tap for details ›</span>
+        <button class="btn sm pink" data-add="${p.id}" ${p.in_stock?'':'disabled'}>${p.in_stock?(sizesOf(p).length?'Choose size':'Add to bag'):'Sold out'}</button></div>
       </article>`).join('')}</div></section>`;
   }).join('');
 }
 
-function add(id){
+function add(id,size=''){
   const p = products.find(x=>x.id===id); if(!p||!p.in_stock) return;
-  const l = bag.find(x=>x.id===id);
-  l ? l.qty++ : bag.push({id,name:p.name,price:p.price,qty:1});
+  const l = bag.find(x=>x.id===id && (x.size||'')===size);
+  l ? l.qty++ : bag.push({id,size,name:p.name,price:p.price,qty:1});
   renderBag(); openBag();
 }
 function renderBag(){
   try { localStorage.setItem('bag', JSON.stringify(bag)); } catch(e){}
   $('#count').textContent = bag.reduce((n,l)=>n+l.qty,0);
   $('#items').innerHTML = bag.length ? bag.map(l=>`
-    <div class="line"><strong>${esc(l.name)}</strong><span>${naira(l.price*l.qty)}</span>
-    <div class="qty"><button data-q="${l.id}" data-d="-1" aria-label="Less">−</button>${l.qty}<button data-q="${l.id}" data-d="1" aria-label="More">+</button></div>
-    <button class="rm" data-rm="${l.id}">Remove</button></div>`).join('') : '<p>Your bag is empty. Add something pretty 💕</p>';
+    <div class="line"><strong>${esc(l.name)}${l.size?' ('+esc(l.size)+')':''}</strong><span>${naira(l.price*l.qty)}</span>
+    <div class="qty"><button data-q="${esc(bagKey(l))}" data-d="-1" aria-label="Less">−</button>${l.qty}<button data-q="${esc(bagKey(l))}" data-d="1" aria-label="More">+</button></div>
+    <button class="rm" data-rm="${esc(bagKey(l))}">Remove</button></div>`).join('') : '<p>Your bag is empty. Add something pretty 💕</p>';
   $('#total').textContent = naira(bag.reduce((n,l)=>n+l.price*l.qty,0));
   $('#order').disabled = !bag.length;
 }
@@ -238,17 +266,19 @@ function orderWA(){
   if(!num){ alert('The shop’s WhatsApp number is not set yet. Please check back soon.'); return; }
   const total = bag.reduce((n,l)=>n+l.price*l.qty,0);
   const msg = `Hello Suzzy's Bizworld! I'd like to place an order:\n` +
-    bag.map(l=>`• ${l.qty}x ${l.name} (${naira(l.price)})`).join('\n') +
+    bag.map(l=>`• ${l.qty}x ${l.name}${l.size?' – Size '+l.size:''} (${naira(l.price)})`).join('\n') +
     `\nTotal: ${naira(total)}\nDelivery address:`;
   window.open(`https://wa.me/${num}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 function openDetail(id){
   const p = products.find(x=>x.id===id); if(!p) return;
-  const d = $('#pd');
+  const sz = sizesOf(p), d = $('#pd');
   d.innerHTML = `<div class="body">${pic(p)}<h2 style="font-size:28px">${esc(p.name)}</h2>
     <div>${CATS[p.category]}</div>${priceHtml(p)}
-    <button class="btn pink" data-add="${p.id}" ${p.in_stock?'':'disabled'}>${p.in_stock?'Add to bag':'Sold out'}</button>
+    ${p.description?`<p class="desc">${esc(p.description)}</p>`:''}
+    ${sz.length?`<div><strong>Choose a size</strong><div class="chips">${sz.map(z=>`<button type="button" class="chip" data-size="${esc(z)}">${esc(z)}</button>`).join('')}</div><div class="msg" id="sizeMsg"></div></div>`:''}
+    <button class="btn pink" data-addm="${p.id}" ${p.in_stock?'':'disabled'}>${p.in_stock?'Add to bag':'Sold out'}</button>
     <button class="btn sm" data-close>Close</button></div>`;
   d.showModal();
 }
@@ -256,12 +286,16 @@ function openDetail(id){
 document.addEventListener('click', e => {
   const t = e.target;
   const addB = t.closest('[data-add]');
-  if(addB){ e.stopPropagation(); $('#pd').open && $('#pd').close(); add(+addB.dataset.add); return; }
+  if(addB){ e.stopPropagation(); const id=+addB.dataset.add; sizesOf(products.find(x=>x.id===id)).length ? openDetail(id) : add(id); return; }
+  const addM = t.closest('[data-addm]');
+  if(addM){ const id=+addM.dataset.addm, sel=$('#pd .chip.on'); if($('#pd .chip') && !sel){ $('#sizeMsg').textContent='Please choose a size.'; return; } $('#pd').close(); add(id, sel?sel.dataset.size:''); return; }
+  const chip = t.closest('.chip');
+  if(chip){ $('#pd').querySelectorAll('.chip').forEach(c=>c.classList.remove('on')); chip.classList.add('on'); $('#sizeMsg').textContent=''; return; }
   if(t.closest('[data-close]')){ $('#pd').close(); return; }
   const q = t.closest('[data-q]');
-  if(q){ const l = bag.find(x=>x.id===+q.dataset.q); l.qty += +q.dataset.d; if(l.qty<1) bag = bag.filter(x=>x!==l); renderBag(); return; }
+  if(q){ const l = bag.find(x=>bagKey(x)===q.dataset.q); l.qty += +q.dataset.d; if(l.qty<1) bag = bag.filter(x=>x!==l); renderBag(); return; }
   const rm = t.closest('[data-rm]');
-  if(rm){ bag = bag.filter(x=>x.id!==+rm.dataset.rm); renderBag(); return; }
+  if(rm){ bag = bag.filter(x=>bagKey(x)!==rm.dataset.rm); renderBag(); return; }
   const card = t.closest('.card');
   if(card) openDetail(+card.dataset.id);
 });
@@ -316,6 +350,8 @@ async function renderAdmin(){
       <label>Name</label><input type="text" id="nn">
       <label>Section</label><select id="nc">${opts('beauty')}</select>
       <label>Price (₦)</label><input type="number" id="np" min="0">
+      <label>Description (optional)</label><textarea id="nd"></textarea>
+      <label>Sizes (optional, separate with commas, e.g. S, M, L)</label><input type="text" id="ns">
       <label>Photo (optional)</label><input type="file" id="nf" accept="image/*">
       <p><button class="btn pink sm" id="addP">Add product</button></p><div class="msg" id="amsg"></div></div>
     <div class="panel"><h3>All products (${products.length})</h3>${products.map(p=>`
@@ -325,6 +361,8 @@ async function renderAdmin(){
         <select class="c">${opts(p.category)}</select>
         <label>Price (₦)</label><input type="number" class="pr" min="0" value="${p.price}">
         <label>Old price (₦, for sale badge, leave empty if none)</label><input type="number" class="cp" min="0" value="${p.compare_at??''}">
+        <label>Description</label><textarea class="ds">${esc(p.description||'')}</textarea>
+        <label>Sizes (comma separated, leave empty if none)</label><input type="text" class="sz" value="${esc(p.sizes||'')}">
         <label><input type="checkbox" class="st" ${p.in_stock?'checked':''}> In stock</label>
         <div class="acts"><button class="btn sm pink" data-act="save">Save</button>
         <label class="btn sm" style="margin:0">Change photo<input type="file" class="pf" accept="image/*" hidden></label>
@@ -359,7 +397,7 @@ async function renderAdmin(){
     try {
       const f = $('#nf').files[0];
       const image_url = f ? await upload(f) : null;
-      const {error} = await sb.from('products').insert({name,category:$('#nc').value,price,image_url});
+      const {error} = await sb.from('products').insert({name,category:$('#nc').value,price,image_url,description:$('#nd').value.trim()||null,sizes:$('#ns').value.trim()||null});
       if(error) throw error;
       await refreshAdmin();
     } catch(err){ $('#amsg').textContent = 'Could not add: '+err.message; }
@@ -394,10 +432,10 @@ document.addEventListener('click', async e => {
   if(isNaN(price)){ msg.textContent = 'Enter a price.'; return; }
   const {error} = await sb.from('products').update({
     name: row.querySelector('.n').value.trim(), category: row.querySelector('.c').value, price,
-    compare_at: cp===''?null:parseInt(cp,10), in_stock: row.querySelector('.st').checked
+    compare_at: cp===''?null:parseInt(cp,10), in_stock: row.querySelector('.st').checked, description: row.querySelector('.ds').value.trim()||null, sizes: row.querySelector('.sz').value.trim()||null
   }).eq('id',id);
   msg.textContent = error ? 'Could not save: '+error.message : 'Saved ✔';
-  if(!error){ const p = products.find(x=>x.id===id); Object.assign(p,{name:row.querySelector('.n').value.trim(),price,in_stock:row.querySelector('.st').checked,compare_at:cp===''?null:parseInt(cp,10),category:row.querySelector('.c').value}); renderStore(); }
+  if(!error){ const p = products.find(x=>x.id===id); Object.assign(p,{name:row.querySelector('.n').value.trim(),price,in_stock:row.querySelector('.st').checked,compare_at:cp===''?null:parseInt(cp,10),category:row.querySelector('.c').value,description:row.querySelector('.ds').value.trim()||null,sizes:row.querySelector('.sz').value.trim()||null}); renderStore(); }
 });
 document.addEventListener('change', async e => {
   if(!e.target.classList.contains('pf')) return;
@@ -423,6 +461,24 @@ document.addEventListener('click', e => {
   const i=b.previousElementSibling, show=i.type==='password';
   i.type=show?'text':'password'; b.textContent=show?'🙈':'👁️'; b.setAttribute('aria-label',show?'Hide password':'Show password');
 });
+function sizesOf(p){ return p&&p.sizes ? String(p.sizes).split(',').map(x=>x.trim()).filter(Boolean) : []; }
+function bagKey(l){ return l.id+'|'+(l.size||''); }
+function renderSearch(){
+  const q=$('#q').value.trim().toLowerCase();
+  const list=products.filter(p=>p.in_stock && (!q || (p.name+' '+CATS[p.category]+' '+(p.description||'')).toLowerCase().includes(q)));
+  $('#sr').innerHTML = list.length ? list.map(p=>`<button type="button" class="sri" data-sr="${p.id}">${p.image_url?`<img src="${esc(p.image_url)}" alt="" loading="lazy">`:`<span class="sth" style="background:${BG[p.id%4]}">${EMO[p.category]}</span>`}<span>${esc(p.name)}</span><b>${naira(p.price)}</b></button>`).join('') : '<p class="srn">'+(products.length?'No products match “'+esc($('#q').value)+'”.':'Loading…')+'</p>';
+  $('#sr').classList.remove('hide');
+}
+const qi=$('#q');
+qi.addEventListener('focus',renderSearch); qi.addEventListener('input',renderSearch);
+qi.addEventListener('keydown',e=>{ if(e.key==='Escape'){ $('#sr').classList.add('hide'); qi.blur(); } });
+document.addEventListener('click',e=>{
+  const it=e.target.closest('[data-sr]');
+  if(it){ $('#sr').classList.add('hide'); qi.value=''; qi.blur(); openDetail(+it.dataset.sr); return; }
+  if(!e.target.closest('.search')) $('#sr').classList.add('hide');
+});
+const TIKTOK='raheemat63';
+if(TIKTOK){ const a=$('#tt'); a.href='https://www.tiktok.com/@'+TIKTOK; a.textContent='Follow us on TikTok @'+TIKTOK; a.classList.remove('hide'); }
 load();
 </script>
 </body>
