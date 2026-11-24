@@ -301,6 +301,12 @@ async function renderAdmin(){
       <label>Orders go to this number (country code first, e.g. 2348012345678)</label>
       <input type="text" inputmode="numeric" id="wa" value="${esc(settings.whatsapp_number||'')}">
       <p><button class="btn pink sm" id="saveWa">Save number</button></p><div class="msg" id="wmsg"></div></div>
+    <div class="panel"><h3>Change password</h3>
+      <label>New password (at least 8 characters)</label>
+      <div class="pwbox"><input type="password" id="np1" autocomplete="new-password"><button type="button" class="eyeb" aria-label="Show password">👁️</button></div>
+      <label>Type it again</label>
+      <div class="pwbox"><input type="password" id="np2" autocomplete="new-password"><button type="button" class="eyeb" aria-label="Show password">👁️</button></div>
+      <p><button class="btn pink sm" id="savePw">Save new password</button></p><div class="msg" id="pmsg"></div></div>
     <div class="panel"><h3>New drops pictures</h3>
       <p style="margin:6px 0">These show in the big “New drops!” frame at the top of the shop. Add one or several. With several, they rotate.</p>
       <input type="file" id="dropUp" accept="image/*" multiple>
@@ -325,6 +331,15 @@ async function renderAdmin(){
         <button class="btn sm" data-act="del">Delete</button><span class="msg"></span></div>
       </div>`).join('')}</div>`;
   $('#logout').onclick = async () => { await sb.auth.signOut(); renderAdmin(); };
+  $('#savePw').onclick = async () => {
+    const a=$('#np1').value, b=$('#np2').value, m=$('#pmsg');
+    if(a.length<8){ m.textContent='Use at least 8 characters.'; return; }
+    if(a!==b){ m.textContent='The two passwords do not match.'; return; }
+    m.textContent='Saving…';
+    const {error}=await sb.auth.updateUser({password:a});
+    if(error){ m.textContent='Could not change password: '+error.message; return; }
+    $('#np1').value=''; $('#np2').value=''; m.textContent='Password changed ✔ Use it the next time you log in.';
+  };
   $('#dropUp').onchange = async e => {
     const files=[...e.target.files]; if(!files.length) return; const m=$('#dmsg');
     try{ for(let i=0;i<files.length;i++){ m.textContent='Uploading '+(i+1)+' of '+files.length+'…'; await upload(files[i],'drops',1200); } await loadDrops(); renderHero(); renderAdmin(); }
@@ -402,6 +417,11 @@ document.addEventListener('click', async e => {
   const {error}=await sb.storage.from('product-images').remove([b.dataset.dd]);
   if(error){ alert('Could not remove: '+error.message); return; }
   await loadDrops(); renderHero(); renderAdmin();
+});
+document.addEventListener('click', e => {
+  const b=e.target.closest('.eyeb'); if(!b) return;
+  const i=b.previousElementSibling, show=i.type==='password';
+  i.type=show?'text':'password'; b.textContent=show?'🙈':'👁️'; b.setAttribute('aria-label',show?'Hide password':'Show password');
 });
 load();
 </script>
