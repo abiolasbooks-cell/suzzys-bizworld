@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suzzy’s Bizworld | Beauty, self-care and home goodies</title>
+<meta name="description" content="Shop beauty, self-care and home & lifestyle goodies from Suzzy’s Bizworld in Nigeria. Fill your bag and order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ff2e93;--yellow:#ffd60a;--ink:#000;--cream:#fff8ec;--soft:#ffe3f1;
+--display:'Bricolage Grotesque',Impact,sans-serif;--body:'Figtree',system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font:16px/1.5 var(--body);background:var(--cream);color:var(--ink)}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.btn{display:inline-block;background:var(--yellow);border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:10px 18px;font-weight:700;border-radius:99px;text-decoration:none;color:var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn.pink{background:var(--pink);color:#fff}
+.btn{transition:transform .15s,box-shadow .15s}
+@media(hover:hover){.btn:not([disabled]):hover{transform:translate(-3px,-4px);box-shadow:8px 8px 0 var(--ink)}}
+.btn:not([disabled]):active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn.sm{padding:6px 12px;box-shadow:3px 3px 0 var(--ink);font-size:14px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.ticker{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;font:700 13px var(--body);letter-spacing:.08em;text-transform:uppercase;padding:8px 0}
+.ticker div{display:inline-block;animation:tick 30s linear infinite}
+.ticker span{margin:0 18px}.ticker i{color:var(--yellow);font-style:normal}
+@keyframes tick{to{transform:translateX(-50%)}}
+header.top{position:sticky;top:0;z-index:20;background:var(--cream);border-bottom:2px solid var(--ink)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 16px}
+.logo{font:800 26px var(--display);letter-spacing:-.04em;color:var(--ink);text-decoration:none}
+.logo b{color:var(--pink)}
+.iconbtn{position:relative;background:none;border:0;font-size:26px;padding:4px 8px}
+#bagBtn{position:relative}
+#count{position:absolute;top:-10px;right:-10px;background:var(--ink);color:#fff;border-radius:99px;min-width:24px;height:24px;font-size:13px;display:grid;place-items:center}
+.wrap{max-width:1100px;margin:0 auto}
+.hero{padding:44px 16px 64px;overflow:hidden}
+.hero .wrap{display:grid;gap:40px;align-items:center;padding:0}
+@media(min-width:860px){.hero .wrap{grid-template-columns:1.05fr 1fr}}
+.pill{display:inline-block;background:var(--yellow);border:2px solid var(--ink);border-radius:99px;padding:6px 16px;font:700 13px var(--body);letter-spacing:.08em;text-transform:uppercase}
+.hero h1{font-size:clamp(54px,12vw,104px);font-weight:800;letter-spacing:-.045em;margin:22px 0}
+.hero h1 em{font-style:normal;color:var(--pink)}
+.hero h1 u{text-decoration:none;background:linear-gradient(transparent 78%,var(--yellow) 78%)}
+.hero p{font-size:19px;max-width:34ch;margin:0 0 26px;color:#4a3a44}
+.hero .btn{padding:14px 34px;font-size:17px}
+.frame{position:relative;aspect-ratio:1;border:3px solid var(--ink);border-radius:30px;box-shadow:10px 10px 0 var(--ink);background:radial-gradient(circle at 25% 28%,var(--yellow) 0 18%,transparent 18.5%),radial-gradient(circle at 78% 80%,var(--yellow) 0 20%,transparent 20.5%),var(--pink);display:grid;place-items:center;font-size:clamp(60px,12vw,110px)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:27px}
+.sticker{position:absolute;top:-18px;left:-8px;width:112px;height:112px;border-radius:50%;background:var(--yellow);border:3px solid var(--ink);display:grid;place-items:center;text-align:center;font:800 18px/1.1 var(--display);transform:rotate(-10deg);z-index:2}
+.shophead{padding:24px 16px 12px;font-size:clamp(34px,6vw,56px);letter-spacing:-.04em}.shophead em{font-style:normal;color:var(--pink)}
+.jump{display:flex;gap:10px;flex-wrap:wrap;padding:0 16px 8px}
+.jump a{border:3px solid var(--ink);border-radius:99px;padding:6px 16px;font-weight:700;text-decoration:none;color:var(--ink);background:var(--soft)}
+section.cat{padding:36px 16px 8px}
+section.cat h2{font-size:clamp(28px,5vw,40px);margin-bottom:16px;letter-spacing:-.03em}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr);gap:20px}}
+@media(min-width:960px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{position:relative;background:#fff;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer}
+.ph{aspect-ratio:1;display:grid;place-items:center;font-size:54px;border-bottom:3px solid var(--ink);width:100%;object-fit:cover}
+.info{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.info h3{font-size:17px;font-weight:700}
+.price{font-weight:800;font-size:18px}
+.price s{font-weight:600;opacity:.55;margin-left:6px;font-size:14px}
+.badge{position:absolute;top:10px;left:-6px;background:var(--yellow);border:3px solid var(--ink);padding:1px 10px;font-weight:800;font-size:13px;transform:rotate(-6deg);z-index:2}
+.badge.out{background:var(--ink);color:#fff;left:auto;right:-6px;transform:rotate(5deg)}
+.info .btn{margin-top:auto;width:100%;text-align:center}
+footer{margin-top:56px;background:var(--pink);border-top:3px solid var(--ink);color:#fff;padding:48px 16px 28px}
+footer h2{font-size:clamp(40px,9vw,80px);letter-spacing:-.04em}
+footer p{font-size:18px;margin:10px 0 28px}
+footer small{font-size:13px}footer a{color:#fff}
+#overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:30;display:none}
+#overlay.open{display:block}
+#bag{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--cream);border-left:3px solid var(--ink);z-index:40;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column}
+#bag.open{transform:none}
+#bag header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:var(--yellow);border-bottom:3px solid var(--ink)}
+#bag h2{font-size:26px}
+#items{flex:1;overflow:auto;padding:12px 16px}
+.line{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:10px 0;border-bottom:2px dashed var(--ink)}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:30px;height:30px;border:3px solid var(--ink);background:#fff;border-radius:8px;font-weight:800}
+.rm{background:none;border:0;text-decoration:underline;font-size:13px;padding:0}
+#bagFoot{padding:14px 16px;border-top:3px solid var(--ink);background:#fff}
+.total{display:flex;justify-content:space-between;font:800 22px var(--display);margin-bottom:10px}
+dialog{border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);border-radius:16px;padding:0;max-width:440px;width:92%;background:var(--cream)}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+dialog .body{padding:16px;display:flex;flex-direction:column;gap:10px}
+dialog .ph{border:3px solid var(--ink);border-radius:12px;font-size:90px}
+#admin{padding:24px 16px}
+#admin h2{font-size:34px;margin-bottom:14px}
+.panel{background:#fff;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);border-radius:14px;padding:14px;margin-bottom:20px}
+.panel label{display:block;font-weight:700;font-size:14px;margin:8px 0 2px}
+.panel input[type=text],.panel input[type=email],.panel input[type=password],.panel input[type=number],.panel select{width:100%;padding:9px;border:3px solid var(--ink);border-radius:8px;background:#fff}
+.arow{border-top:3px solid var(--ink);padding:12px 0;display:grid;gap:4px}
+.arow .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.arow img,.arow .thumb{width:64px;height:64px;object-fit:cover;border:3px solid var(--ink);border-radius:8px;display:grid;place-items:center;font-size:28px}
+.msg{font-weight:700;margin-top:8px}
+.hide{display:none!important}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="ticker" aria-hidden="true"><div><span>Nails</span><i>✦</i><span>Skincare</span><i>✦</i><span>Delivered across Nigeria</span><i>✦</i><span>Glow-up essentials</span><i>✦</i><span>Lips</span><i>✦</i><span>Cheeks</span><i>✦</i><span>Nails</span><i>✦</i><span>Skincare</span><i>✦</i><span>Delivered across Nigeria</span><i>✦</i><span>Glow-up essentials</span><i>✦</i><span>Lips</span><i>✦</i><span>Cheeks</span><i>✦</i></div></div>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#">Suzzy’s<b>Bizworld</b></a>
+  <button class="iconbtn" id="bagBtn" aria-label="Open shopping bag">🛍️<span id="count">0</span></button>
+</div></header>
+
+<main id="store">
+  <div class="hero"><div class="wrap">
+    <div>
+      <span class="pill">✨ Beauty, self-care &amp; more</span>
+      <h1>Glow <em>loud.</em><br>Shine <u>bold.</u></h1>
+      <p>Skincare, nails, hair, body art and handy home finds, all picked by Suzzy.</p>
+      <a class="btn pink" href="#catalog">Shop now</a>
+    </div>
+    <div class="frame"><span aria-hidden="true">💄💅✨</span>
+      <img src="hero.jpg" alt="Lipsticks, blush and nail polish on a pink and yellow background" onerror="this.remove()">
+      <div class="sticker">New<br>drops!</div></div>
+  </div></div>
+  <h2 class="shophead wrap" id="shop">Shop the <em>collection</em></h2>
+  <nav class="jump wrap" aria-label="Sections">
+    <a href="#beauty">Beauty</a><a href="#self-care">Self-care</a><a href="#home">Home & lifestyle</a>
+  </nav>
+  <div class="wrap" id="catalog"><p style="padding:24px 16px">Loading the shop…</p></div>
+</main>
+
+<main id="admin" class="hide"><div class="wrap" id="adminBody"></div></main>
+
+<footer><div class="wrap">
+  <h2>Suzzy’s Bizworld</h2>
+  <p>Beauty that’s loud, fun and totally you.</p>
+  <small>© 2026 Suzzy’s Bizworld</small>
+</div></footer>
+
+<div id="overlay"></div>
+<aside id="bag" aria-label="Shopping bag">
+  <header><h2>Your bag</h2><button class="btn sm" id="closeBag">Close</button></header>
+  <div id="items"></div>
+  <div id="bagFoot">
+    <div class="total"><span>Total</span><span id="total">₦0</span></div>
+    <button class="btn pink" id="order" style="width:100%">Order on WhatsApp</button>
+    <p style="font-size:13px;margin:8px 0 0">You’ll add your delivery address in WhatsApp. Suzzy confirms payment there.</p>
+  </div>
+</aside>
+<dialog id="pd"></dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+const sb = supabase.createClient('https://sgordhvduwdfgicgtrej.supabase.co','sb_publishable_vUzxmQGY3wGEUQJUnSrjYA_rRUlJxig');
+const CATS = {beauty:'Beauty','self-care':'Self-care',home:'Home & lifestyle'};
+const EMO = {beauty:'💄','self-care':'🌸',home:'🏠'};
+const BG = ['#ffe3f1','#fff3b0','#ffc2e0','#ffe98a'];
+const $ = s => document.querySelector(s);
+const naira = n => '₦' + Number(n).toLocaleString('en-US');
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let products = [], settings = {whatsapp_number:''}, bag = [];
+try { bag = JSON.parse(localStorage.getItem('bag') || '[]'); } catch(e) { bag = []; }
+
+function pic(p){
+  return p.image_url
+    ? `<img class="ph" src="${esc(p.image_url)}" alt="${esc(p.name)}" loading="lazy">`
+    : `<div class="ph" style="background:${BG[p.id%4]}">${EMO[p.category]}</div>`;
+}
+function priceHtml(p){ return `<div class="price">${naira(p.price)}${p.compare_at?`<s>${naira(p.compare_at)}</s>`:''}</div>`; }
+
+async function load(){
+  const [a,b] = await Promise.all([
+    sb.from('products').select('*').order('id'),
+    sb.from('settings').select('*').eq('id',1).single()
+  ]);
+  if(a.error){ $('#catalog').innerHTML = '<p style="padding:24px 16px">Could not load the shop. Check your connection and refresh.</p>'; return; }
+  products = a.data; if(b.data) settings = b.data;
+  // keep bag in sync with live prices and stock
+  bag = bag.map(l => { const p = products.find(x=>x.id===l.id); return p && p.in_stock ? {...l,name:p.name,price:p.price} : null; }).filter(Boolean);
+  renderStore(); renderBag(); route();
+}
+
+function renderStore(){
+  $('#catalog').innerHTML = Object.keys(CATS).map(c => {
+    const list = products.filter(p=>p.category===c);
+    return `<section class="cat" id="${c}"><h2>${CATS[c]}</h2><div class="grid">${list.map(p=>`
+      <article class="card" data-id="${p.id}" tabindex="0">
+        ${p.compare_at&&p.in_stock?'<span class="badge">SALE</span>':''}${p.in_stock?'':'<span class="badge out">Sold out</span>'}
+        ${pic(p)}
+        <div class="info"><h3>${esc(p.name)}</h3>${priceHtml(p)}
+        <button class="btn sm pink" data-add="${p.id}" ${p.in_stock?'':'disabled'}>${p.in_stock?'Add to bag':'Sold out'}</button></div>
+      </article>`).join('')}</div></section>`;
+  }).join('');
+}
+
+function add(id){
+  const p = products.find(x=>x.id===id); if(!p||!p.in_stock) return;
+  const l = bag.find(x=>x.id===id);
+  l ? l.qty++ : bag.push({id,name:p.name,price:p.price,qty:1});
+  renderBag(); openBag();
+}
+function renderBag(){
+  try { localStorage.setItem('bag', JSON.stringify(bag)); } catch(e){}
+  $('#count').textContent = bag.reduce((n,l)=>n+l.qty,0);
+  $('#items').innerHTML = bag.length ? bag.map(l=>`
+    <div class="line"><strong>${esc(l.name)}</strong><span>${naira(l.price*l.qty)}</span>
+    <div class="qty"><button data-q="${l.id}" data-d="-1" aria-label="Less">−</button>${l.qty}<button data-q="${l.id}" data-d="1" aria-label="More">+</button></div>
+    <button class="rm" data-rm="${l.id}">Remove</button></div>`).join('') : '<p>Your bag is empty. Add something pretty 💕</p>';
+  $('#total').textContent = naira(bag.reduce((n,l)=>n+l.price*l.qty,0));
+  $('#order').disabled = !bag.length;
+}
+function openBag(){ $('#bag').classList.add('open'); $('#overlay').classList.add('open'); }
+function closeBag(){ $('#bag').classList.remove('open'); $('#overlay').classList.remove('open'); }
+
+function orderWA(){
+  const num = (settings.whatsapp_number||'').replace(/\D/g,'');
+  if(!num){ alert('The shop’s WhatsApp number is not set yet. Please check back soon.'); return; }
+  const total = bag.reduce((n,l)=>n+l.price*l.qty,0);
+  const msg = `Hello Suzzy's Bizworld! I'd like to place an order:\n` +
+    bag.map(l=>`• ${l.qty}x ${l.name} (${naira(l.price)})`).join('\n') +
+    `\nTotal: ${naira(total)}\nDelivery address:`;
+  window.open(`https://wa.me/${num}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+function openDetail(id){
+  const p = products.find(x=>x.id===id); if(!p) return;
+  const d = $('#pd');
+  d.innerHTML = `<div class="body">${pic(p)}<h2 style="font-size:28px">${esc(p.name)}</h2>
+    <div>${CATS[p.category]}</div>${priceHtml(p)}
+    <button class="btn pink" data-add="${p.id}" ${p.in_stock?'':'disabled'}>${p.in_stock?'Add to bag':'Sold out'}</button>
+    <button class="btn sm" data-close>Close</button></div>`;
+  d.showModal();
+}
+
+document.addEventListener('click', e => {
+  const t = e.target;
+  const addB = t.closest('[data-add]');
+  if(addB){ e.stopPropagation(); $('#pd').open && $('#pd').close(); add(+addB.dataset.add); return; }
+  if(t.closest('[data-close]')){ $('#pd').close(); return; }
+  const q = t.closest('[data-q]');
+  if(q){ const l = bag.find(x=>x.id===+q.dataset.q); l.qty += +q.dataset.d; if(l.qty<1) bag = bag.filter(x=>x!==l); renderBag(); return; }
+  const rm = t.closest('[data-rm]');
+  if(rm){ bag = bag.filter(x=>x.id!==+rm.dataset.rm); renderBag(); return; }
+  const card = t.closest('.card');
+  if(card) openDetail(+card.dataset.id);
+});
+document.addEventListener('keydown', e => { if(e.key==='Enter' && e.target.classList.contains('card')) openDetail(+e.target.dataset.id); });
+$('#bagBtn').onclick = openBag; $('#closeBag').onclick = closeBag; $('#overlay').onclick = closeBag; $('#order').onclick = orderWA;
+
+/* ---------- MANAGE SHOP ---------- */
+function route(){
+  const admin = location.hash === '#manage';
+  $('#store').classList.toggle('hide', admin);
+  $('#admin').classList.toggle('hide', !admin);
+  if(admin) renderAdmin(); else if(location.hash && $(location.hash)) $(location.hash).scrollIntoView();
+}
+window.addEventListener('hashchange', route);
+
+async function renderAdmin(){
+  const {data:{session}} = await sb.auth.getSession();
+  const box = $('#adminBody');
+  if(!session){
+    box.innerHTML = `<h2>Manage shop</h2><div class="panel"><label>Email</label><input type="email" id="em" autocomplete="username">
+      <label>Password</label><input type="password" id="pw" autocomplete="current-password">
+      <p><button class="btn pink" id="login">Log in</button></p><div class="msg" id="lmsg"></div></div>`;
+    $('#login').onclick = async () => {
+      const {error} = await sb.auth.signInWithPassword({email:$('#em').value.trim(), password:$('#pw').value});
+      error ? $('#lmsg').textContent = 'Wrong email or password. Try again.' : renderAdmin();
+    };
+    return;
+  }
+  const opts = v => Object.keys(CATS).map(c=>`<option value="${c}" ${c===v?'selected':''}>${CATS[c]}</option>`).join('');
+  box.innerHTML = `<h2>Manage shop</h2>
+    <p><button class="btn sm" id="logout">Log out</button> <a class="btn sm" href="#">View shop</a></p>
+    <div class="panel"><h3>WhatsApp number</h3>
+      <label>Orders go to this number (country code first, e.g. 2348012345678)</label>
+      <input type="text" inputmode="numeric" id="wa" value="${esc(settings.whatsapp_number||'')}">
+      <p><button class="btn pink sm" id="saveWa">Save number</button></p><div class="msg" id="wmsg"></div></div>
+    <div class="panel"><h3>Add a product</h3>
+      <label>Name</label><input type="text" id="nn">
+      <label>Section</label><select id="nc">${opts('beauty')}</select>
+      <label>Price (₦)</label><input type="number" id="np" min="0">
+      <label>Photo (optional)</label><input type="file" id="nf" accept="image/*">
+      <p><button class="btn pink sm" id="addP">Add product</button></p><div class="msg" id="amsg"></div></div>
+    <div class="panel"><h3>All products (${products.length})</h3>${products.map(p=>`
+      <div class="arow" data-id="${p.id}">
+        <div style="display:flex;gap:10px;align-items:center">${p.image_url?`<img src="${esc(p.image_url)}" alt="">`:`<div class="thumb" style="background:${BG[p.id%4]}">${EMO[p.category]}</div>`}
+        <input type="text" class="n" value="${esc(p.name)}"></div>
+        <select class="c">${opts(p.category)}</select>
+        <label>Price (₦)</label><input type="number" class="pr" min="0" value="${p.price}">
+        <label>Old price (₦, for sale badge, leave empty if none)</label><input type="number" class="cp" min="0" value="${p.compare_at??''}">
+        <label><input type="checkbox" class="st" ${p.in_stock?'checked':''}> In stock</label>
+        <div class="acts"><button class="btn sm pink" data-act="save">Save</button>
+        <label class="btn sm" style="margin:0">Change photo<input type="file" class="pf" accept="image/*" hidden></label>
+        <button class="btn sm" data-act="del">Delete</button><span class="msg"></span></div>
+      </div>`).join('')}</div>`;
+  $('#logout').onclick = async () => { await sb.auth.signOut(); renderAdmin(); };
+  $('#saveWa').onclick = async () => {
+    const v = $('#wa').value.replace(/\D/g,'');
+    if(v.length<10||v.length>15){ $('#wmsg').textContent = 'Enter digits only, with country code. Example: 2348012345678'; return; }
+    const {error} = await sb.from('settings').update({whatsapp_number:v}).eq('id',1);
+    if(error){ $('#wmsg').textContent = 'Could not save: '+error.message; return; }
+    settings.whatsapp_number = v; $('#wmsg').textContent = 'Saved ✔';
+  };
+  $('#addP').onclick = async () => {
+    const name = $('#nn').value.trim(), price = parseInt($('#np').value,10);
+    if(!name||isNaN(price)){ $('#amsg').textContent = 'Enter a name and a price.'; return; }
+    $('#amsg').textContent = 'Adding…';
+    try {
+      const f = $('#nf').files[0];
+      const image_url = f ? await upload(f) : null;
+      const {error} = await sb.from('products').insert({name,category:$('#nc').value,price,image_url});
+      if(error) throw error;
+      await refreshAdmin();
+    } catch(err){ $('#amsg').textContent = 'Could not add: '+err.message; }
+  };
+}
+async function refreshAdmin(){
+  const {data} = await sb.from('products').select('*').order('id');
+  if(data){ products = data; renderStore(); }
+  renderAdmin();
+}
+async function resize(file){
+  const bmp = await createImageBitmap(file), s = Math.min(1, 800/Math.max(bmp.width,bmp.height));
+  const c = document.createElement('canvas'); c.width = Math.round(bmp.width*s); c.height = Math.round(bmp.height*s);
+  c.getContext('2d').drawImage(bmp,0,0,c.width,c.height);
+  return new Promise(r => c.toBlob(r,'image/webp',0.82));
+}
+async function upload(file){
+  const blob = await resize(file), path = Date.now()+'-'+Math.random().toString(36).slice(2,7)+'.webp';
+  const {error} = await sb.storage.from('product-images').upload(path, blob, {contentType:'image/webp'});
+  if(error) throw error;
+  return sb.storage.from('product-images').getPublicUrl(path).data.publicUrl;
+}
+document.addEventListener('click', async e => {
+  const b = e.target.closest('[data-act]'); if(!b) return;
+  const row = b.closest('.arow'), id = +row.dataset.id, msg = row.querySelector('.msg');
+  if(b.dataset.act==='del'){
+    if(!confirm('Delete this product for good?')) return;
+    const {error} = await sb.from('products').delete().eq('id',id);
+    return error ? msg.textContent = error.message : refreshAdmin();
+  }
+  const price = parseInt(row.querySelector('.pr').value,10), cp = row.querySelector('.cp').value;
+  if(isNaN(price)){ msg.textContent = 'Enter a price.'; return; }
+  const {error} = await sb.from('products').update({
+    name: row.querySelector('.n').value.trim(), category: row.querySelector('.c').value, price,
+    compare_at: cp===''?null:parseInt(cp,10), in_stock: row.querySelector('.st').checked
+  }).eq('id',id);
+  msg.textContent = error ? 'Could not save: '+error.message : 'Saved ✔';
+  if(!error){ const p = products.find(x=>x.id===id); Object.assign(p,{name:row.querySelector('.n').value.trim(),price,in_stock:row.querySelector('.st').checked,compare_at:cp===''?null:parseInt(cp,10),category:row.querySelector('.c').value}); renderStore(); }
+});
+document.addEventListener('change', async e => {
+  if(!e.target.classList.contains('pf')) return;
+  const row = e.target.closest('.arow'), msg = row.querySelector('.msg'), id = +row.dataset.id;
+  try {
+    msg.textContent = 'Uploading…';
+    const image_url = await upload(e.target.files[0]);
+    const {error} = await sb.from('products').update({image_url}).eq('id',id);
+    if(error) throw error;
+    await refreshAdmin();
+  } catch(err){ msg.textContent = 'Upload failed: '+err.message; }
+});
+
+load();
+</script>
+</body>
+</html>
