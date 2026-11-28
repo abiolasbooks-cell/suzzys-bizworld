@@ -7,7 +7,7 @@
 <meta name="description" content="Shop beauty, self-care and home & lifestyle goodies from Suzzy’s Bizworld in Nigeria. Fill your bag and order on WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Playfair+Display:ital,wght@1,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--pinkd:#d1006c;--pink:#ff2e93;--yellow:#ffd60a;--ink:#000;--cream:#fff8ec;--soft:#ffe3f1;
 --display:'Bricolage Grotesque',Impact,sans-serif;--body:'Figtree',system-ui,sans-serif}
@@ -272,6 +272,25 @@ body:has(dialog[open]){overflow:hidden}
 @media(hover:hover){.btn.pink:not([disabled]):hover{background:linear-gradient(180deg,#a8366a,#8a2350)}}
 .sticker{width:104px;height:104px;top:18px;left:18px;color:var(--pink);font:700 16px/1.12 var(--display);letter-spacing:.02em;text-decoration:none}
 .sticker::before,.sticker::after{content:none}
+
+/* ---------- Welcome greeting + spinning badge ---------- */
+.welcome{text-align:center;padding:30px 16px 0;overflow:hidden}
+.w1{font:italic 600 clamp(36px,10vw,68px)/1.1 'Playfair Display',Georgia,serif;color:var(--pink);letter-spacing:-.01em}
+.w1 .ch{display:inline-block;opacity:0;animation:rise .7s cubic-bezier(.2,.8,.2,1) forwards,wave 3.2s ease-in-out infinite;animation-delay:calc(var(--i)*55ms),calc(.9s + var(--i)*120ms)}
+@keyframes rise{from{opacity:0;transform:translateY(24px) rotate(6deg)}to{opacity:1;transform:none}}
+@keyframes wave{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.w2{margin-top:10px;font:600 12px/1.6 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--ink);opacity:0;animation:fadeup .8s ease .9s forwards}
+@keyframes fadeup{from{opacity:0;transform:translateY(10px)}to{opacity:.85;transform:none}}
+.w2 i{font-style:normal;color:var(--pink);display:inline-block;margin:0 8px;animation:twinkle 2s ease-in-out infinite}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0);opacity:.6}50%{transform:scale(1.4) rotate(45deg);opacity:1}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sticker{animation:spin 12s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.w1 .ch{opacity:1}.w2{opacity:.85}}
+
+/* ---------- Badge: hop and bounce back ---------- */
+.sticker{animation:hop 4.5s ease-in-out infinite}
+@keyframes hop{0%,62%,100%{transform:translateY(0)}68%{transform:translateY(-22px) scale(1.06)}76%{transform:translateY(0) scale(.96,1.04)}82%{transform:translateY(-8px)}88%{transform:translateY(0) scale(1.02,.98)}94%{transform:translateY(-2px)}}
 </style>
 </head>
 <body>
@@ -282,10 +301,11 @@ body:has(dialog[open]){overflow:hidden}
 </div></header>
 
 <main id="store">
+  <div class="welcome" id="welcome"><div class="w1" id="w1"></div><div class="w2"><i>✦</i>Welcome to Suzzy’s shop!<i>✦</i></div></div>
+  <script>(function(){var h=new Date().getHours(),g=(h>=5&&h<12?'Good morning':(h>=12&&h<17?'Good afternoon':'Good evening'))+',';document.getElementById('w1').innerHTML='<span class="sr">'+g+'</span><span aria-hidden="true">'+Array.from(g).map(function(c,i){return '<span class="ch" style="--i:'+i+'">'+(c===' '?'\u00a0':c)+'</span>';}).join('')+'</span>';})();</script>
   <div class="hero"><div class="wrap">
     <div>
-      <div class="greet" id="greet"></div>
-      <script>(function(){var h=new Date().getHours(),g=h>=5&&h<12?'Good morning':(h>=12&&h<17?'Good afternoon':'Good evening');document.getElementById('greet').textContent=g+', welcome to Suzzy’s shop!';})();</script>
+      
       <h1>Glow <em>loud.</em><br>Shine <u>bold.</u></h1>
       <p>Skincare, hair, nails, body art and handy home finds, personally curated by Suzzy.</p>
       <a class="btn pink" href="#catalog">Shop now</a>
