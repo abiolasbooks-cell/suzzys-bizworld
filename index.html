@@ -230,26 +230,69 @@ footer small{opacity:.55}
 .tt{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.35);color:#fff;transition:background .2s,color .2s}
 .tt svg{width:20px;height:20px;fill:currentColor}
 .tt:hover{background:#fff;color:var(--ink)}
+
+/* ---------- Round 2 polish ---------- */
+:root{--pink:#9e2a5b;--pinkd:#9e2a5b}
+.ticker{white-space:nowrap}
+.ticker div{animation:none;display:flex}
+.ticker .track{width:max-content;animation:tick 55s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.ticker p{display:flex;flex:none;align-items:center;margin:0}
+.ticker span{margin:0 22px;font-weight:600}
+.ticker i{display:block;transform:rotate(45deg);color:#d9a9bb;font-size:11px;font-style:normal}
+.iconbtn{color:var(--ink);display:grid;place-items:center;padding:6px}
+.iconbtn svg{display:block}
+.greet{font:600 12px/1.6 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--pink);max-width:32ch}
+.btn,.jump a{border-radius:9999px}
+.btn{border:1px solid #e2dcd3;box-shadow:0 2px 8px rgba(30,27,24,.08)}
+.btn.pink{border-color:transparent;box-shadow:0 4px 14px rgba(158,42,91,.30),inset 0 1px 0 rgba(255,255,255,.25)}
+.jump a{box-shadow:0 2px 8px rgba(30,27,24,.08);transition:background .2s,transform .2s,box-shadow .2s}
+@media(hover:hover){
+.btn:not([disabled]):hover{transform:translateY(-1px);border-color:#cfc7bc;box-shadow:0 4px 12px rgba(30,27,24,.12)}
+.btn.pink:not([disabled]):hover{background:#8a2350;border-color:transparent;box-shadow:0 8px 22px rgba(158,42,91,.38),inset 0 1px 0 rgba(255,255,255,.25)}
+.jump a:hover{transform:translateY(-1px)}
+}
+.btn:not([disabled]):active,.jump a:active{transform:translateY(1px);box-shadow:0 1px 4px rgba(30,27,24,.1)}
+.btn.pink:not([disabled]):active{transform:translateY(1px);box-shadow:0 2px 8px rgba(158,42,91,.30),inset 0 1px 0 rgba(255,255,255,.2)}
+.btn[disabled]{box-shadow:none}
+.sticker{top:16px;left:16px;width:92px;height:92px;border-radius:50%;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.7);box-shadow:0 8px 24px rgba(30,27,24,.12);transform:none;color:var(--ink);font:600 11.5px/1.35 var(--body);letter-spacing:.16em;text-transform:uppercase}
+
+/* ---------- Pop-up scrolling ---------- */
+dialog{max-height:88vh;max-height:88dvh}
+dialog[open]{display:flex;flex-direction:column}
+dialog .body{overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;flex:1 1 auto;min-height:0}
+dialog .body>*{flex-shrink:0}
+.dfoot{position:sticky;bottom:0;margin:4px -20px -20px;padding:12px 20px 20px;background:var(--cream);border-top:1px solid var(--line)}
+.dfoot .btn{width:100%}
+.dclose{position:absolute;top:12px;left:12px;z-index:3;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.92);font-size:20px;line-height:1;padding:0;color:var(--ink);box-shadow:0 2px 8px rgba(30,27,24,.12)}
+body:has(dialog[open]){overflow:hidden}
+
+/* ---------- Match reference look ---------- */
+.btn.pink{background:linear-gradient(180deg,#b23c6d 0%,#9e2a5b 55%,#8a2350 100%);box-shadow:0 4px 14px rgba(158,42,91,.30),inset 0 1px 0 rgba(255,255,255,.25),inset 0 -2px 0 rgba(0,0,0,.14)}
+@media(hover:hover){.btn.pink:not([disabled]):hover{background:linear-gradient(180deg,#a8366a,#8a2350)}}
+.sticker{width:104px;height:104px;top:18px;left:18px;color:var(--pink);font:700 16px/1.12 var(--display);letter-spacing:.02em;text-decoration:none}
+.sticker::before,.sticker::after{content:none}
 </style>
 </head>
 <body>
-<div class="ticker" aria-hidden="true"><div><span>Nails</span><i>✦</i><span>Skincare</span><i>✦</i><span>Delivered across Nigeria</span><i>✦</i><span>Glow-up essentials</span><i>✦</i><span>Lips</span><i>✦</i><span>Cheeks</span><i>✦</i><span>Nails</span><i>✦</i><span>Skincare</span><i>✦</i><span>Delivered across Nigeria</span><i>✦</i><span>Glow-up essentials</span><i>✦</i><span>Lips</span><i>✦</i><span>Cheeks</span><i>✦</i></div></div>
+<div class="ticker" aria-hidden="true"><div class="track"><p class="grp"><span>Delivered across Nigeria</span><i>✦</i><span>Curated beauty &amp; self-care</span><i>✦</i><span>Fast WhatsApp ordering</span><i>✦</i><span>Delivered across Nigeria</span><i>✦</i><span>Curated beauty &amp; self-care</span><i>✦</i><span>Fast WhatsApp ordering</span><i>✦</i><span>Delivered across Nigeria</span><i>✦</i><span>Curated beauty &amp; self-care</span><i>✦</i><span>Fast WhatsApp ordering</span><i>✦</i><span>Delivered across Nigeria</span><i>✦</i><span>Curated beauty &amp; self-care</span><i>✦</i><span>Fast WhatsApp ordering</span><i>✦</i></p><p class="grp"><span>Delivered across Nigeria</span><i>✦</i><span>Curated beauty &amp; self-care</span><i>✦</i><span>Fast WhatsApp ordering</span><i>✦</i><span>Delivered across Nigeria</span><i>✦</i><span>Curated beauty &amp; self-care</span><i>✦</i><span>Fast WhatsApp ordering</span><i>✦</i><span>Delivered across Nigeria</span><i>✦</i><span>Curated beauty &amp; self-care</span><i>✦</i><span>Fast WhatsApp ordering</span><i>✦</i><span>Delivered across Nigeria</span><i>✦</i><span>Curated beauty &amp; self-care</span><i>✦</i><span>Fast WhatsApp ordering</span><i>✦</i></p></div></div>
 <header class="top"><div class="wrap">
   <a class="logo" href="/">Suzzy’s<b>Bizworld</b></a>
-  <button class="iconbtn" id="bagBtn" aria-label="Open shopping bag">🛍️<span id="count">0</span></button>
+  <button class="iconbtn" id="bagBtn" aria-label="Open shopping bag"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span id="count">0</span></button>
 </div></header>
 
 <main id="store">
   <div class="hero"><div class="wrap">
     <div>
-      <span class="pill">✨ Beauty, self-care &amp; more</span>
+      <div class="greet" id="greet"></div>
+      <script>(function(){var h=new Date().getHours(),g=h>=5&&h<12?'Good morning':(h>=12&&h<17?'Good afternoon':'Good evening');document.getElementById('greet').textContent=g+', welcome to Suzzy’s shop!';})();</script>
       <h1>Glow <em>loud.</em><br>Shine <u>bold.</u></h1>
-      <p>Skincare, nails, hair, body art and handy home finds, all picked by Suzzy.</p>
+      <p>Skincare, hair, nails, body art and handy home finds, personally curated by Suzzy.</p>
       <a class="btn pink" href="#catalog">Shop now</a>
     </div>
     <div class="frame"><span aria-hidden="true">💄💅✨</span>
       <img id="heroImg" src="hero.jpg" alt="New drops at Suzzy’s Bizworld" onerror="this.style.display='none'">
-      <div class="sticker">New<br>drops!</div></div>
+      <div class="sticker">New<br>drops</div></div>
   </div></div>
   <section class="how wrap" id="how"><h2>How to order</h2><ol>
     <li><b>1</b><span>Add items to your bag</span></li>
@@ -380,12 +423,11 @@ function openDetail(id){
   const p = products.find(x=>x.id===id); if(!p) return;
   const sz = sizesOf(p), im = imgs(p), d = $('#pd');
   const gal = im.length ? `<div class="galw"><div class="gal" id="gal">${im.map((u,i)=>`<img src="${esc(u)}" alt="${esc(p.name)} photo ${i+1}"${i?' loading="lazy"':''}>`).join('')}</div>${im.length>1?`<span class="gcount" id="gcount">1 / ${im.length}</span><button type="button" class="gnav l" data-g="-1" aria-label="Previous photo">‹</button><button type="button" class="gnav r" data-g="1" aria-label="Next photo">›</button>`:''}</div>${im.length>1?`<div class="dots" id="dots">${im.map((_,i)=>`<i class="${i?'':'on'}"></i>`).join('')}</div>`:''}` : `<div class="ph" style="background:${BG[p.id%4]}">${EMO[p.category]}</div>`;
-  d.innerHTML = `<div class="body">${gal}<h2 style="font-size:28px">${esc(p.name)}</h2>
+  d.innerHTML = `<button type="button" class="dclose" data-close aria-label="Close">×</button><div class="body">${gal}<h2 style="font-size:28px">${esc(p.name)}</h2>
     <div>${CATS[p.category]}</div>${priceHtml(p)}
     ${p.description?`<p class="desc">${esc(p.description)}</p>`:''}
     ${sz.length?`<div><strong>Choose a size</strong><div class="chips">${sz.map(z=>`<button type="button" class="chip" data-size="${esc(z)}">${esc(z)}</button>`).join('')}</div><div class="msg" id="sizeMsg"></div></div>`:''}
-    <button class="btn pink" data-addm="${p.id}" ${p.in_stock?'':'disabled'}>${p.in_stock?'Add to bag':'Sold out'}</button>
-    <button class="btn sm" data-close>Close</button></div>`;
+    <div class="dfoot"><button class="btn pink" data-addm="${p.id}" ${p.in_stock?'':'disabled'}>${p.in_stock?'Add to bag':'Sold out'}</button></div></div>`;
   d.showModal();
   const g=$('#gal');
   if(g&&im.length>1) g.addEventListener('scroll',()=>{ const i=Math.round(g.scrollLeft/g.clientWidth); $('#gcount').textContent=(i+1)+' / '+im.length; $('#dots').querySelectorAll('i').forEach((x,k)=>x.classList.toggle('on',k===i)); });
@@ -401,7 +443,7 @@ document.addEventListener('click', e => {
   if(addM){ const id=+addM.dataset.addm, sel=$('#pd .chip.on'); if($('#pd .chip') && !sel){ $('#sizeMsg').textContent='Please choose a size.'; return; } $('#pd').close(); add(id, sel?sel.dataset.size:''); return; }
   const chip = t.closest('.chip');
   if(chip){ $('#pd').querySelectorAll('.chip').forEach(c=>c.classList.remove('on')); chip.classList.add('on'); $('#sizeMsg').textContent=''; return; }
-  if(t.closest('[data-close]')){ $('#pd').close(); return; }
+  if(t.closest('[data-close]')||t.id==='pd'){ $('#pd').close(); return; }
   const q = t.closest('[data-q]');
   if(q){ const l = bag.find(x=>bagKey(x)===q.dataset.q); l.qty += +q.dataset.d; if(l.qty<1) bag = bag.filter(x=>x!==l); renderBag(); return; }
   const rm = t.closest('[data-rm]');
